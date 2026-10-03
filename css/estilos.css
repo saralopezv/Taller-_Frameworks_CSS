@@ -529,6 +529,128 @@ h4,
   font-size: 0.9rem;
 }
 
+section[id],
+footer[id] {
+  scroll-margin-top: 5rem;
+}
+
+@media screen and (max-width: 1023px) {
+  .navbar-menu.is-active {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 100%;
+    background-color: var(--verde-oscuro);
+    border-top: 1px solid rgba(207, 187, 154, 0.2);
+    box-shadow: 0 16px 26px rgba(19, 19, 9, 0.4);
+    padding: 0.5rem 0 1.25rem;
+  }
+
+  .navbar-menu.is-active .navbar-item {
+    padding: 0.85rem 1.5rem;
+  }
+
+  .navbar-menu.is-active .navbar-end {
+    padding: 0.75rem 1.5rem 0;
+  }
+}
+
+@media screen and (min-width: 769px) and (max-width: 1023px) {
+  .seccion-hero .title {
+    font-size: 2.4rem;
+  }
+
+  .hero-foto-secundaria {
+    left: -1rem;
+    width: 45%;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .seccion-hero {
+    padding: 3rem 1.25rem 4rem;
+  }
+
+  .seccion-hero .title {
+    font-size: 2.15rem;
+  }
+
+  .hero-texto {
+    font-size: 1.02rem;
+  }
+
+  .hero-contenido .buttons .button {
+    width: 100%;
+  }
+
+  .hero-datos {
+    gap: 1rem;
+    margin-top: 1.5rem;
+  }
+
+  .hero-galeria {
+    padding-bottom: 1.5rem;
+    margin-top: 1rem;
+  }
+
+  .hero-foto-secundaria {
+    left: 1rem;
+    bottom: 0.5rem;
+    width: 44%;
+    border-width: 5px;
+  }
+
+  .hero-sello {
+    top: 0.75rem;
+    right: 0.75rem;
+    font-size: 0.72rem;
+    padding: 0.55rem 0.9rem;
+  }
+
+  .seccion-experiencia {
+    padding: 3rem 1.25rem;
+  }
+
+  .seccion-servicios {
+    padding: 3.75rem 1.25rem 4rem;
+  }
+
+  .seccion-encabezado {
+    margin-bottom: 2.25rem;
+  }
+
+  .seccion-encabezado .title {
+    font-size: 1.85rem;
+  }
+
+  .tarjeta-servicio {
+    padding: 1.6rem;
+  }
+
+  .seccion-reserva {
+    padding: 3.75rem 1.25rem;
+  }
+
+  .seccion-reserva .title {
+    font-size: 1.85rem;
+  }
+
+  .formulario-reserva {
+    padding: 1.5rem;
+    border-radius: 18px;
+  }
+
+  .footer {
+    padding: 2.75rem 1.25rem 1.5rem;
+  }
+
+  .footer-titulo-espacio {
+    margin-top: 1.25rem;
+  }
+}
+
+
+
 
 
 
