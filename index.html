@@ -14,16 +14,36 @@
 <body>
 
   <header>
-    <nav>
-      <a href="#inicio">Casa Nativa</a>
-      <ul>
-        <li><a href="#inicio">Inicio</a></li>
-        <li><a href="#experiencia">Experiencia</a></li>
-        <li><a href="#servicios">Servicios</a></li>
-        <li><a href="#reserva">Reserva</a></li>
-        <li><a href="#contacto">Contacto</a></li>
-      </ul>
-      <a href="#reserva">Reservar ahora</a>
+    <nav class="navbar" id="menu-principal" aria-label="menú principal">
+      <div class="container">
+        <div class="navbar-brand">
+          <a class="navbar-item navbar-marca" href="#inicio">
+            <span class="icon mr-2" aria-hidden="true">
+              <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M11 20A7 7 0 0 1 9.8 6.1C15.5 5 17 4.48 19 2c1 2 2 4.18 2 8 0 5.5-4.78 10-10 10Z"/><path d="M2 21c0-3 1.85-5.36 5.08-6C9.5 14.52 12 13 13 12"/></svg>
+            </span>
+            Casa Nativa
+          </a>
+          <a class="navbar-burger" role="button" aria-label="menú" aria-expanded="false" data-target="menu-links">
+            <span aria-hidden="true"></span>
+            <span aria-hidden="true"></span>
+            <span aria-hidden="true"></span>
+          </a>
+        </div>
+        <div class="navbar-menu" id="menu-links">
+          <div class="navbar-start">
+            <a class="navbar-item" href="#inicio">Inicio</a>
+            <a class="navbar-item" href="#experiencia">Experiencia</a>
+            <a class="navbar-item" href="#servicios">Servicios</a>
+            <a class="navbar-item" href="#reserva">Reserva</a>
+            <a class="navbar-item" href="#contacto">Contacto</a>
+          </div>
+          <div class="navbar-end">
+            <div class="navbar-item">
+              <a class="button navbar-cta" href="#reserva">Reservar ahora</a>
+            </div>
+          </div>
+        </div>
+      </div>
     </nav>
   </header>
 
@@ -58,6 +78,24 @@
     <p>Pereira, Risaralda</p>
     <p>© 2026 Casa Nativa. Proyecto académico.</p>
   </footer>
+
+  <script>
+    document.querySelectorAll('.navbar-burger').forEach(function (burger) {
+      var menu = document.getElementById(burger.dataset.target);
+      burger.addEventListener('click', function () {
+        burger.classList.toggle('is-active');
+        menu.classList.toggle('is-active');
+        burger.setAttribute('aria-expanded', burger.classList.contains('is-active'));
+      });
+      menu.querySelectorAll('.navbar-item').forEach(function (item) {
+        item.addEventListener('click', function () {
+          burger.classList.remove('is-active');
+          menu.classList.remove('is-active');
+          burger.setAttribute('aria-expanded', 'false');
+        });
+      });
+    });
+  </script>
 
 </body>
 </html>

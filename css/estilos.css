@@ -60,3 +60,56 @@ h4,
   background-color: var(--verde-medio);
   color: var(--crema);
 }
+
+.navbar {
+  position: sticky;
+  top: 0;
+  z-index: 50;
+  background-color: var(--verde-oscuro);
+  box-shadow: 0 2px 14px rgba(19, 19, 9, 0.28);
+}
+
+.navbar-item,
+.navbar-link {
+  color: var(--crema);
+}
+
+.navbar-item:hover,
+.navbar-item:focus-visible {
+  background-color: rgba(230, 215, 196, 0.14);
+  color: #ffffff;
+}
+
+.navbar-marca {
+  font-family: var(--bulma-family-secondary);
+  font-size: 1.3rem;
+  font-weight: 600;
+  letter-spacing: 0.01em;
+}
+
+.navbar-marca .icon {
+  color: var(--verde-claro);
+}
+
+.navbar-burger span {
+  background-color: var(--crema);
+}
+
+.navbar-menu {
+  background-color: var(--verde-oscuro);
+}
+
+.navbar-cta {
+  background-color: var(--arena);
+  border-color: var(--arena);
+  color: var(--verde-oscuro);
+  font-weight: 600;
+}
+
+.navbar-cta:hover,
+.navbar-cta:focus {
+  background-color: var(--crema);
+  border-color: var(--crema);
+  color: var(--verde-oscuro);
+}
+
