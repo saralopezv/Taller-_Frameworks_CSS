@@ -1,0 +1,62 @@
+:root {
+  --verde-oscuro: #2F3E21;
+  --verde-base: #364025;
+  --verde-medio: #758956;
+  --verde-claro: #899064;
+  --marron: #6A5746;
+  --marron-oscuro: #4B3D1A;
+  --marron-profundo: #3A2C1F;
+  --arena: #CFBB9A;
+  --crema: #E6D7C4;
+  --tinta: #131309;
+
+  --bulma-scheme-h: 82;
+  --bulma-scheme-s: 20%;
+  --bulma-text-h: 60deg;
+  --bulma-text-s: 30%;
+  --bulma-text-l: 14%;
+  --bulma-text-strong-l: 8%;
+  --bulma-text-title-l: 6%;
+  --bulma-text-weak-l: 45%;
+  --bulma-primary-h: 82deg;
+  --bulma-primary-s: 27%;
+  --bulma-primary-l: 20%;
+  --bulma-primary-invert-l: 94%;
+  --bulma-primary-rgb: 54, 64, 37;
+  --bulma-link-h: 82deg;
+  --bulma-link-s: 27%;
+  --bulma-link-l: 20%;
+  --bulma-success-h: 84deg;
+  --bulma-success-s: 23%;
+  --bulma-family-primary: "Inter", "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  --bulma-family-secondary: "Fraunces", Georgia, "Times New Roman", serif;
+  --bulma-radius-small: 6px;
+  --bulma-radius: 10px;
+  --bulma-radius-medium: 14px;
+  --bulma-radius-large: 18px;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: var(--crema);
+  color: var(--tinta);
+  font-family: var(--bulma-family-primary);
+  -webkit-font-smoothing: antialiased;
+}
+
+h1,
+h2,
+h3,
+h4,
+.title,
+.subtitle {
+  font-family: var(--bulma-family-secondary);
+}
+
+::selection {
+  background-color: var(--verde-medio);
+  color: var(--crema);
+}
