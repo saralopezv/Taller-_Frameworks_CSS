@@ -165,9 +165,114 @@
       </div>
     </section>
 
-    <section id="reserva">
-      <h2>Planea tu próxima escapada</h2>
-      <p>Cuéntanos cuándo quieres visitarnos y nos pondremos en contacto contigo para confirmar disponibilidad.</p>
+    <section class="seccion-reserva" id="reserva">
+      <div class="container">
+        <div class="columns is-variable is-8">
+          <div class="column is-5">
+            <span class="tag is-rounded reserva-etiqueta">Reserva</span>
+            <h2 class="title is-2">Planea tu próxima escapada</h2>
+            <p class="reserva-texto">Cuéntanos cuándo quieres visitarnos y nos pondremos en contacto contigo para confirmar disponibilidad.</p>
+            <div class="reserva-contacto">
+              <div class="reserva-dato">
+                <span class="icon" aria-hidden="true"><svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92Z"/></svg></span>
+                <span>
+                  <span class="reserva-dato-titulo">Teléfono</span>
+                  <span class="reserva-dato-valor">+57 300 555 0180</span>
+                </span>
+              </div>
+              <div class="reserva-dato">
+                <span class="icon" aria-hidden="true"><svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect width="20" height="16" x="2" y="4" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg></span>
+                <span>
+                  <span class="reserva-dato-titulo">Correo</span>
+                  <span class="reserva-dato-valor">reservas@casanativa.demo</span>
+                </span>
+              </div>
+              <div class="reserva-dato">
+                <span class="icon" aria-hidden="true"><svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg></span>
+                <span>
+                  <span class="reserva-dato-titulo">Ubicación</span>
+                  <span class="reserva-dato-valor">Pereira, Risaralda</span>
+                </span>
+              </div>
+            </div>
+          </div>
+          <div class="column is-7">
+            <form class="box formulario-reserva" action="#" method="get" onsubmit="return false;">
+              <div class="columns">
+                <div class="column is-6">
+                  <div class="field">
+                    <label class="label" for="nombre">Nombre completo</label>
+                    <div class="control has-icons-left">
+                      <input class="input" type="text" id="nombre" name="nombre" placeholder="Escribe tu nombre" autocomplete="name">
+                      <span class="icon is-left" aria-hidden="true"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M19 21v-2a4 4 0 0 0-4-4H9a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg></span>
+                    </div>
+                  </div>
+                </div>
+                <div class="column is-6">
+                  <div class="field">
+                    <label class="label" for="correo">Correo electrónico</label>
+                    <div class="control has-icons-left">
+                      <input class="input" type="email" id="correo" name="correo" placeholder="tucorreo@ejemplo.com" autocomplete="email">
+                      <span class="icon is-left" aria-hidden="true"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect width="20" height="16" x="2" y="4" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg></span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="columns">
+                <div class="column is-6">
+                  <div class="field">
+                    <label class="label" for="telefono">Teléfono</label>
+                    <div class="control has-icons-left">
+                      <input class="input" type="tel" id="telefono" name="telefono" placeholder="300 000 0000" autocomplete="tel">
+                      <span class="icon is-left" aria-hidden="true"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92Z"/></svg></span>
+                    </div>
+                  </div>
+                </div>
+                <div class="column is-6">
+                  <div class="field">
+                    <label class="label" for="huespedes">Número de huéspedes</label>
+                    <div class="control has-icons-left">
+                      <input class="input" type="number" id="huespedes" name="huespedes" min="1" max="20" placeholder="2">
+                      <span class="icon is-left" aria-hidden="true"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M22 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg></span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="columns">
+                <div class="column is-6">
+                  <div class="field">
+                    <label class="label" for="llegada">Fecha de llegada</label>
+                    <div class="control has-icons-left">
+                      <input class="input" type="date" id="llegada" name="llegada">
+                      <span class="icon is-left" aria-hidden="true"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M8 2v4"/><path d="M16 2v4"/><rect width="18" height="18" x="3" y="4" rx="2"/><path d="M3 10h18"/></svg></span>
+                    </div>
+                  </div>
+                </div>
+                <div class="column is-6">
+                  <div class="field">
+                    <label class="label" for="salida">Fecha de salida</label>
+                    <div class="control has-icons-left">
+                      <input class="input" type="date" id="salida" name="salida">
+                      <span class="icon is-left" aria-hidden="true"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M8 2v4"/><path d="M16 2v4"/><rect width="18" height="18" x="3" y="4" rx="2"/><path d="M3 10h18"/></svg></span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="field">
+                <label class="label" for="mensaje">Mensaje o solicitud especial</label>
+                <div class="control">
+                  <textarea class="textarea" id="mensaje" name="mensaje" rows="4" placeholder="Cuéntanos qué necesitas para tu estadía"></textarea>
+                </div>
+              </div>
+              <div class="field">
+                <div class="control">
+                  <button class="button is-primary is-medium is-fullwidth" type="submit">Enviar solicitud</button>
+                </div>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
     </section>
   </main>
 

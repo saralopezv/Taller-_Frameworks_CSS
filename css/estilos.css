@@ -340,5 +340,119 @@ h4,
   line-height: 1.65;
 }
 
+.seccion-reserva {
+  background-color: var(--arena);
+  padding: 5rem 1.5rem;
+}
+
+.reserva-etiqueta {
+  background-color: var(--verde-oscuro);
+  color: var(--crema);
+  font-size: 0.72rem;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
+.seccion-reserva .title {
+  margin-top: 1.25rem;
+  margin-bottom: 1rem;
+  line-height: 1.15;
+}
+
+.reserva-texto {
+  color: var(--marron-profundo);
+  font-size: 1.08rem;
+  line-height: 1.7;
+  margin-bottom: 2rem;
+}
+
+.reserva-contacto {
+  display: grid;
+  gap: 0.9rem;
+}
+
+.reserva-dato {
+  display: flex;
+  align-items: center;
+  gap: 0.9rem;
+  background-color: rgba(230, 215, 196, 0.6);
+  border: 1px solid rgba(106, 87, 70, 0.25);
+  border-radius: 14px;
+  padding: 0.85rem 1.1rem;
+}
+
+.reserva-dato .icon {
+  color: var(--verde-oscuro);
+  flex-shrink: 0;
+}
+
+.reserva-dato-titulo,
+.reserva-dato-valor {
+  display: block;
+}
+
+.reserva-dato-titulo {
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--marron);
+}
+
+.reserva-dato-valor {
+  font-size: 0.98rem;
+  font-weight: 500;
+  color: var(--tinta);
+}
+
+.formulario-reserva {
+  background-color: var(--crema);
+  border: none;
+  border-radius: 22px;
+  padding: 2.25rem;
+  box-shadow: 0 24px 48px -26px rgba(58, 44, 31, 0.7);
+}
+
+.formulario-reserva .label {
+  color: var(--marron-profundo);
+  font-weight: 600;
+  font-size: 0.85rem;
+}
+
+.formulario-reserva .input,
+.formulario-reserva .textarea {
+  background-color: var(--arena);
+  border-color: rgba(106, 87, 70, 0.55);
+  color: var(--tinta);
+}
+
+.formulario-reserva .input::placeholder,
+.formulario-reserva .textarea::placeholder {
+  color: rgba(106, 87, 70, 0.75);
+}
+
+.formulario-reserva .input:hover,
+.formulario-reserva .textarea:hover {
+  border-color: var(--marron);
+}
+
+.formulario-reserva .input:focus,
+.formulario-reserva .textarea:focus {
+  border-color: var(--verde-oscuro);
+  box-shadow: 0 0 0 3px rgba(117, 137, 86, 0.5);
+}
+
+.formulario-reserva .icon.is-left {
+  color: var(--marron);
+}
+
+.formulario-reserva .button.is-primary {
+  font-weight: 700;
+  letter-spacing: 0.02em;
+  height: 3rem;
+}
+
+
 
 
