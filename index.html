@@ -197,7 +197,7 @@
             </div>
           </div>
           <div class="column is-7">
-            <form class="box formulario-reserva" action="#" method="get" onsubmit="return false;">
+            <form class="box formulario-reserva" action="#" method="get">
               <div class="columns">
                 <div class="column is-6">
                   <div class="field">
@@ -311,23 +311,8 @@
     </div>
   </footer>
 
-  <script>
-    document.querySelectorAll('.navbar-burger').forEach(function (burger) {
-      var menu = document.getElementById(burger.dataset.target);
-      burger.addEventListener('click', function () {
-        burger.classList.toggle('is-active');
-        menu.classList.toggle('is-active');
-        burger.setAttribute('aria-expanded', burger.classList.contains('is-active'));
-      });
-      menu.querySelectorAll('.navbar-item').forEach(function (item) {
-        item.addEventListener('click', function () {
-          burger.classList.remove('is-active');
-          menu.classList.remove('is-active');
-          burger.setAttribute('aria-expanded', 'false');
-        });
-      });
-    });
-  </script>
+  <script src="https://cdn.jsdelivr.net/npm/animejs@3.2.2/lib/anime.min.js"></script>
+  <script src="js/animaciones.js"></script>
 
 </body>
 </html>

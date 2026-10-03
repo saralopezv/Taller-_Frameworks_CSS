@@ -310,11 +310,10 @@ h4,
   padding: 2rem;
   height: 100%;
   box-shadow: 0 14px 30px -18px rgba(58, 44, 31, 0.55);
-  transition: transform 0.25s ease, box-shadow 0.25s ease;
+  transition: box-shadow 0.25s ease;
 }
 
 .tarjeta-servicio:hover {
-  transform: translateY(-6px);
   box-shadow: 0 24px 40px -20px rgba(58, 44, 31, 0.6);
 }
 
@@ -328,6 +327,12 @@ h4,
   background-color: var(--verde-oscuro);
   color: var(--crema);
   margin-bottom: 1.25rem;
+  transition: transform 0.25s ease, background-color 0.25s ease;
+}
+
+.tarjeta-servicio:hover .icon-servicio {
+  transform: scale(1.08) rotate(-4deg);
+  background-color: var(--marron-oscuro);
 }
 
 .tarjeta-servicio .title {
