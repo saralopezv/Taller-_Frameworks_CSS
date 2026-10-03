@@ -51,8 +51,7 @@ h1,
 h2,
 h3,
 h4,
-.title,
-.subtitle {
+.title {
   font-family: var(--bulma-family-secondary);
 }
 
@@ -225,5 +224,121 @@ h4,
   border-radius: 999px;
   box-shadow: 0 10px 24px rgba(19, 19, 9, 0.35);
 }
+
+.seccion-experiencia {
+  background-color: var(--verde-oscuro);
+  color: var(--crema);
+  padding: 3.5rem 1.5rem;
+}
+
+.experiencia-etiqueta {
+  background-color: var(--verde-medio);
+  color: var(--tinta);
+  font-size: 0.72rem;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
+.seccion-experiencia .title {
+  color: var(--crema);
+  margin-top: 1.25rem;
+}
+
+.experiencia-dato {
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+}
+
+.experiencia-dato .title {
+  margin-top: 1rem;
+  margin-bottom: 0.5rem;
+}
+
+.experiencia-dato p {
+  color: rgba(230, 215, 196, 0.82);
+  font-size: 0.95rem;
+  line-height: 1.6;
+}
+
+.icono-redondo {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 52px;
+  height: 52px;
+  border-radius: 50%;
+  background-color: rgba(137, 144, 100, 0.28);
+  color: var(--arena);
+}
+
+.seccion-servicios {
+  padding: 5rem 1.5rem 5.5rem;
+  background-color: var(--crema);
+}
+
+.seccion-encabezado {
+  text-align: center;
+  max-width: 44rem;
+  margin: 0 auto 3rem;
+}
+
+.servicios-etiqueta {
+  background-color: var(--arena);
+  color: var(--verde-oscuro);
+  font-size: 0.72rem;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
+.seccion-encabezado .title {
+  margin-top: 1.25rem;
+  margin-bottom: 1rem;
+  line-height: 1.15;
+}
+
+.seccion-encabezado .subtitle {
+  color: var(--marron-profundo);
+  line-height: 1.65;
+}
+
+.tarjeta-servicio {
+  background-color: var(--arena);
+  border: none;
+  border-radius: 20px;
+  padding: 2rem;
+  height: 100%;
+  box-shadow: 0 14px 30px -18px rgba(58, 44, 31, 0.55);
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.tarjeta-servicio:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 24px 40px -20px rgba(58, 44, 31, 0.6);
+}
+
+.icon-servicio {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 56px;
+  height: 56px;
+  border-radius: 16px;
+  background-color: var(--verde-oscuro);
+  color: var(--crema);
+  margin-bottom: 1.25rem;
+}
+
+.tarjeta-servicio .title {
+  color: var(--tinta);
+  margin-bottom: 0.6rem;
+}
+
+.tarjeta-servicio p {
+  color: var(--marron-profundo);
+  line-height: 1.65;
+}
+
 
 
