@@ -113,3 +113,117 @@ h4,
   color: var(--verde-oscuro);
 }
 
+.seccion-hero {
+  position: relative;
+  padding: 4.5rem 1.5rem 6rem;
+  overflow: hidden;
+}
+
+.seccion-hero::before {
+  content: "";
+  position: absolute;
+  top: -25%;
+  right: -12%;
+  width: 55%;
+  height: 95%;
+  background: radial-gradient(closest-side, rgba(137, 144, 100, 0.38), rgba(137, 144, 100, 0));
+  pointer-events: none;
+}
+
+.seccion-hero > .container {
+  position: relative;
+}
+
+.hero-etiqueta {
+  background-color: var(--arena);
+  color: var(--verde-oscuro);
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  padding: 0.6em 1.15em;
+}
+
+.seccion-hero .title {
+  font-size: 3.1rem;
+  line-height: 1.12;
+  margin-top: 1.5rem;
+  margin-bottom: 1.25rem;
+}
+
+.hero-texto {
+  font-size: 1.12rem;
+  line-height: 1.75;
+  color: var(--marron-profundo);
+  max-width: 34rem;
+  margin-bottom: 2rem;
+}
+
+.hero-contenido .button {
+  font-weight: 600;
+}
+
+.hero-contenido .button.is-outlined {
+  border-width: 2px;
+}
+
+.hero-datos {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.75rem;
+  margin-top: 2rem;
+}
+
+.hero-dato {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: var(--marron);
+}
+
+.hero-dato .icon {
+  color: var(--verde-medio);
+}
+
+.hero-galeria {
+  position: relative;
+  padding-bottom: 2.5rem;
+}
+
+.hero-foto-principal {
+  display: block;
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  object-fit: cover;
+  border-radius: 24px;
+  box-shadow: 0 26px 50px -18px rgba(58, 44, 31, 0.55);
+}
+
+.hero-foto-secundaria {
+  position: absolute;
+  left: -1.75rem;
+  bottom: 0;
+  width: 42%;
+  aspect-ratio: 4 / 3;
+  object-fit: cover;
+  border-radius: 18px;
+  border: 7px solid var(--crema);
+  box-shadow: 0 18px 34px -12px rgba(58, 44, 31, 0.5);
+}
+
+.hero-sello {
+  position: absolute;
+  top: 1.25rem;
+  right: 1rem;
+  background-color: var(--verde-oscuro);
+  color: var(--crema);
+  font-size: 0.8rem;
+  font-weight: 600;
+  padding: 0.7rem 1.1rem;
+  border-radius: 999px;
+  box-shadow: 0 10px 24px rgba(19, 19, 9, 0.35);
+}
+
+
