@@ -69,6 +69,11 @@ h4,
   z-index: 50;
   background-color: var(--verde-oscuro);
   box-shadow: 0 2px 14px rgba(19, 19, 9, 0.28);
+  transition: box-shadow 0.25s ease;
+}
+
+.navbar-scrolled {
+  box-shadow: 0 6px 26px rgba(19, 19, 9, 0.45);
 }
 
 .navbar-item,
@@ -91,6 +96,16 @@ h4,
 
 .navbar-marca .icon {
   color: var(--verde-claro);
+}
+
+.navbar-marca .icon svg {
+  transform-origin: 50% 75%;
+  transition: transform 0.3s ease;
+}
+
+.navbar-marca:hover .icon svg,
+.navbar-marca:focus-visible .icon svg {
+  transform: rotate(-16deg) scale(1.12);
 }
 
 .navbar-burger span {
@@ -169,6 +184,20 @@ h4,
   border-width: 2px;
 }
 
+.hero-contenido .button,
+.navbar-cta,
+.formulario-reserva .button {
+  transition: transform 0.2s ease, box-shadow 0.2s ease, background-color 0.2s ease,
+    border-color 0.2s ease, color 0.2s ease;
+}
+
+.hero-contenido .button:hover,
+.navbar-cta:hover,
+.formulario-reserva .button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 20px -10px rgba(19, 19, 9, 0.5);
+}
+
 .hero-datos {
   display: flex;
   flex-wrap: wrap;
@@ -187,6 +216,14 @@ h4,
 
 .hero-dato .icon {
   color: var(--verde-medio);
+}
+
+.hero-dato .icon svg {
+  transition: transform 0.25s ease;
+}
+
+.hero-dato:hover .icon svg {
+  transform: translateY(-3px) scale(1.25);
 }
 
 .hero-galeria {
@@ -273,6 +310,12 @@ h4,
   border-radius: 50%;
   background-color: rgba(137, 144, 100, 0.28);
   color: var(--arena);
+  transition: transform 0.3s cubic-bezier(0.34, 1.56, 0.64, 1), background-color 0.3s ease;
+}
+
+.icono-redondo:hover {
+  transform: translateY(-6px) scale(1.1) rotate(-8deg);
+  background-color: rgba(137, 144, 100, 0.45);
 }
 
 .seccion-servicios {
@@ -313,10 +356,11 @@ h4,
   padding: 2rem;
   height: 100%;
   box-shadow: 0 14px 30px -18px rgba(58, 44, 31, 0.55);
-  transition: box-shadow 0.25s ease;
+  transition: box-shadow 0.25s ease, transform 0.25s ease;
 }
 
 .tarjeta-servicio:hover {
+  transform: translateY(-6px);
   box-shadow: 0 24px 40px -20px rgba(58, 44, 31, 0.6);
 }
 
@@ -388,6 +432,13 @@ h4,
   border: 1px solid rgba(106, 87, 70, 0.25);
   border-radius: 14px;
   padding: 0.85rem 1.1rem;
+  transition: transform 0.25s ease, box-shadow 0.25s ease, background-color 0.25s ease;
+}
+
+.reserva-dato:hover {
+  transform: translateX(6px);
+  background-color: rgba(230, 215, 196, 0.92);
+  box-shadow: 0 10px 22px -14px rgba(58, 44, 31, 0.55);
 }
 
 .reserva-dato .icon {
@@ -526,6 +577,7 @@ h4,
 
 .footer-enlaces a:hover {
   color: var(--arena);
+  transform: translateX(4px);
 }
 
 .footer-final {
@@ -654,5 +706,18 @@ footer[id] {
 
   .footer-titulo-espacio {
     margin-top: 1.25rem;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    transition-duration: 0.01ms !important;
   }
 }

@@ -37,9 +37,9 @@ Landing page responsive del proyecto **Casa Nativa**, una casa de hospedaje rura
 
 Anime.js v3.2.2, también por CDN. Está en dos zonas obligatorias:
 
-- **Menú:** anima la marca, los enlaces y el botón al cargar, y la apertura del menú móvil.
-- **Servicios:** las 4 tarjetas entran escalonadas cuando la sección aparece en pantalla.
-- Extra: también entra el contenido del hero.
+- **Menú:** anima la marca, los enlaces y el botón al cargar, y la apertura del menú móvil. Además la hoja del logo se mece suave, el menú fijo proyecta más sombra al hacer scroll y los enlaces resaltan al pasar el mouse.
+- **Servicios:** las 4 tarjetas entran escalonadas cuando la sección aparece en pantalla (ahora con un ligero efecto de escala) y se elevan al pasar el mouse.
+- Extra: el contenido del hero entra escalonado y los iconos de arriba (logo, ubicación y teléfono) hacen un pequeño rebote. Los iconos de la franja de experiencia aparecen con un rebote elástico, y los títulos, el formulario y el footer también entran solos al hacer scroll. Los iconos y botones tienen efecto hover con CSS. Si el sistema tiene activada la opción de reducir movimiento, todo esto se apaga automáticamente.
 
 ## Colores usados
 

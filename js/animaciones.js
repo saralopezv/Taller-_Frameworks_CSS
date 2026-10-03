@@ -1,4 +1,9 @@
 (function () {
+  var reducido =
+    window.matchMedia &&
+    window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  var conAnime = typeof anime !== 'undefined' && !reducido;
+
   var burger = document.querySelector('.navbar-burger');
   var menu = document.getElementById('menu-links');
 
@@ -8,7 +13,7 @@
       menu.classList.toggle('is-active', abierto);
       burger.setAttribute('aria-expanded', abierto);
 
-      if (abierto) {
+      if (abierto && conAnime) {
         anime({
           targets: '#menu-links .navbar-item',
           opacity: [0, 1],
@@ -28,6 +33,76 @@
       });
     });
   }
+
+  var nav = document.getElementById('menu-principal');
+
+  function alScroll() {
+    if (nav) {
+      nav.classList.toggle('navbar-scrolled', window.scrollY > 8);
+    }
+  }
+
+  window.addEventListener('scroll', alScroll, { passive: true });
+  alScroll();
+
+  var formulario = document.querySelector('.formulario-reserva');
+
+  if (formulario) {
+    formulario.addEventListener('submit', function (evento) {
+      evento.preventDefault();
+    });
+  }
+
+  if (!conAnime) {
+    return;
+  }
+
+  function limpiar(anim) {
+    (anim.targets || []).forEach(function (elemento) {
+      if (elemento && elemento.style) {
+        elemento.style.transform = '';
+        elemento.style.opacity = '';
+      }
+    });
+  }
+
+  function alEntrar(selector, inicial, anim) {
+    var objetivos = document.querySelectorAll(selector);
+    if (!objetivos.length || !('IntersectionObserver' in window)) {
+      return;
+    }
+
+    anime.set(objetivos, inicial);
+
+    var observador = new IntersectionObserver(
+      function (entradas) {
+        entradas.forEach(function (entrada) {
+          if (entrada.isIntersecting) {
+            var opciones = { targets: selector, complete: limpiar };
+            for (var clave in anim) {
+              opciones[clave] = anim[clave];
+            }
+            anime(opciones);
+            observador.disconnect();
+          }
+        });
+      },
+      { threshold: 0, rootMargin: '0px 0px -70px 0px' }
+    );
+
+    objetivos.forEach(function (objetivo) {
+      observador.observe(objetivo);
+    });
+  }
+
+  anime({
+    targets: '.navbar-marca .icon',
+    rotate: [-7, 7],
+    direction: 'alternate',
+    loop: true,
+    duration: 2300,
+    easing: 'easeInOutSine'
+  });
 
   anime({
     targets: '.navbar-marca',
@@ -64,37 +139,140 @@
     easing: 'easeOutCubic'
   });
 
+  anime({
+    targets: '.hero-dato .icon',
+    opacity: [0, 1],
+    scale: [0.2, 1],
+    delay: anime.stagger(160, { start: 850 }),
+    duration: 700,
+    easing: 'easeOutBack'
+  });
+
   var tarjetas = document.querySelectorAll('.tarjeta-servicio');
 
   if (tarjetas.length && 'IntersectionObserver' in window) {
-    anime.set(tarjetas, { opacity: 0, translateY: 50 });
+    anime.set(tarjetas, { opacity: 0, translateY: 50, scale: 0.955 });
 
-    var observador = new IntersectionObserver(function (entradas) {
-      entradas.forEach(function (entrada) {
-        if (entrada.isIntersecting) {
-          anime({
-            targets: '.tarjeta-servicio',
-            opacity: [0, 1],
-            translateY: [50, 0],
-            delay: anime.stagger(140),
-            duration: 650,
-            easing: 'easeOutCubic'
-          });
-          observador.disconnect();
-        }
-      });
-    }, { threshold: 0.2 });
+    var observadorTarjetas = new IntersectionObserver(
+      function (entradas) {
+        entradas.forEach(function (entrada) {
+          if (entrada.isIntersecting) {
+            anime({
+              targets: '.tarjeta-servicio',
+              opacity: [0, 1],
+              translateY: [50, 0],
+              scale: [0.955, 1],
+              delay: anime.stagger(140),
+              duration: 650,
+              easing: 'easeOutCubic',
+              complete: limpiar
+            });
+            observadorTarjetas.disconnect();
+          }
+        });
+      },
+      { threshold: 0.15 }
+    );
 
     tarjetas.forEach(function (tarjeta) {
-      observador.observe(tarjeta);
+      observadorTarjetas.observe(tarjeta);
     });
   }
 
-  var formulario = document.querySelector('.formulario-reserva');
+  alEntrar(
+    '.experiencia-etiqueta, .seccion-experiencia .title.is-4',
+    { opacity: 0, translateX: -24 },
+    {
+      opacity: [0, 1],
+      translateX: [-24, 0],
+      duration: 650,
+      delay: anime.stagger(130),
+      easing: 'easeOutCubic'
+    }
+  );
 
-  if (formulario) {
-    formulario.addEventListener('submit', function (evento) {
-      evento.preventDefault();
-    });
-  }
+  alEntrar(
+    '.icono-redondo',
+    { opacity: 0, scale: 0.3, rotate: -20 },
+    {
+      opacity: [0, 1],
+      scale: [0.3, 1],
+      rotate: [-20, 0],
+      duration: 850,
+      delay: anime.stagger(150),
+      easing: 'easeOutElastic(1, 0.62)'
+    }
+  );
+
+  alEntrar(
+    '.experiencia-dato .title, .experiencia-dato p',
+    { opacity: 0, translateY: 18 },
+    {
+      opacity: [0, 1],
+      translateY: [18, 0],
+      duration: 600,
+      delay: anime.stagger(80),
+      easing: 'easeOutCubic'
+    }
+  );
+
+  alEntrar(
+    '.seccion-encabezado > *',
+    { opacity: 0, translateY: 28 },
+    {
+      opacity: [0, 1],
+      translateY: [28, 0],
+      duration: 700,
+      delay: anime.stagger(120),
+      easing: 'easeOutCubic'
+    }
+  );
+
+  alEntrar(
+    '.reserva-etiqueta, .seccion-reserva .title, .reserva-texto',
+    { opacity: 0, translateY: 26 },
+    {
+      opacity: [0, 1],
+      translateY: [26, 0],
+      duration: 650,
+      delay: anime.stagger(110),
+      easing: 'easeOutCubic'
+    }
+  );
+
+  alEntrar(
+    '.reserva-dato',
+    { opacity: 0, translateX: -30 },
+    {
+      opacity: [0, 1],
+      translateX: [-30, 0],
+      duration: 600,
+      delay: anime.stagger(130),
+      easing: 'easeOutCubic'
+    }
+  );
+
+  alEntrar(
+    '.formulario-reserva',
+    { opacity: 0, translateY: 40, scale: 0.97 },
+    {
+      opacity: [0, 1],
+      translateY: [40, 0],
+      scale: [0.97, 1],
+      duration: 750,
+      easing: 'easeOutCubic'
+    }
+  );
+
+  alEntrar(
+    '.footer .columns .column',
+    { opacity: 0, translateY: 26 },
+    {
+      opacity: [0, 1],
+      translateY: [26, 0],
+      duration: 650,
+      delay: anime.stagger(130),
+      easing: 'easeOutCubic'
+    }
+  );
 })();
